@@ -24,7 +24,7 @@ const Quotes = () => {
   return (
     <div className='quotes-main'>
         <div className='container p-5'>
-            <h2 className='quotes-cursive' onClick={getQuotes}>Quotes of the day!</h2>
+            <h2 className='quotes-cursive' onClick={getQuotes}>Quotes of the day! </h2>
             {/* <button> Generate</button> */}
             <div className='quotes-box container rounded'>
                 <div className='quotes-text'>{quotes.text}</div>
