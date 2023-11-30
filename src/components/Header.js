@@ -8,18 +8,22 @@ const Header = () => {
   return (
     <div className='header-wrapper'> 
       <div className='main-info'>
-            <h1> {tulisan}</h1>
-            <Typed
+          <h2 className='info-small'> Wedding Invitation For</h2>
+          <h1> Anwar</h1>
+          <h2> &</h2>
+          <h1> Azreena</h1>
 
-                className="typed-text"
-                strings= {["Web Design!", "Web Development!","Computer Vision!"]}
-                typeSpeed={40}
-                backSpeed={60}
-                loop
-            
-            />
+          <div className='date-info'>
+              <div className='header-day'> Saturday </div>
+              <div className='header-date'> September 24 2023</div>
+          </div>
 
-            <a href='#' className='btn btn-danger'> Contact Me</a>
+          <div className='address-info'>
+            <p> CORPORAT PARK, PUTRA NILAI 71800 Nilai, Negeri Sembilan, Malaysia</p>
+
+          </div>
+          
+          
       </div>
     </div>
   )

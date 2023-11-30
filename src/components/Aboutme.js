@@ -12,28 +12,57 @@ const Aboutme = () => {
 
   }, []);
   return (
-    <div className='container py-5 aboutcontain ' data-aos = "fade-up" >
-        <div className='row'>
-            <div className='col-lg-6 col-xm-12'>
-
-                <div className='photo-wrap mb-5'>
-                      <img className='profile-img' src={profile} alt='author....'/>
-                </div>
-               
-              
-
-            </div>
-            <div className='col-lg-6 col-xm-12'>
-
-                <h3 className='about-heading'> About me</h3>
-                <p className='about-para'>
-                      Hi, my name is Muhammad Aiman bin Ruslaan. I am a final year student at University Malaysia Sabah, and I thoroughly enjoy web development and programming. I am passionate about creating responsive and user-friendly websites using programming languages such as HTML, CSS, JavaScript, and PHP. I am also eager to learn new things and expand my knowledge in this field.
-                </p>
-
-            </div>
-
+    <div className=' aboutcontain p-5 ' data-aos = "fade-up" >
+      <div className='walimat'>
+        <h3> Walimatul Urus</h3>
+        <h3> Wedding Invitation</h3>
+        <div className="abahumi">
+          <h2> Ruslaan Abdul Ghani</h2>
+          <h1> &</h1>
+          <h2> Shahri binti Man</h2>
         </div>
+
+        <div className="segalahormat">
+           <p> Dengan segala hormatnya menjemput Y.B. / Datuk/ Dato'/ Datin/ Tuan/ Puan/ Sdra/ Sdri ke Majlis Perkahwinan</p>
+        </div>
+
+        <div className="segalahormat-2">
+           <p> Cordially Invite Mr/Mdm/Ms to the wedding Reception of</p>
+        </div>
+
+        <div className="abahumi">
+          <h2> Muhammad Anwar bin Ruslaan</h2>
+          <h1> &</h1>
+          <h2> Azreena</h2>
+        </div>
+
+
+        <div className="weddetails">
+           <h3> Date</h3>
+           <p> Saturday, 24 September 2022</p>
+        </div>
+
+        
+        <div className="weddetails">
+           <h3> Time</h3>
+           <p> 11:00 AM - 4:00 PM</p>
+        </div>
+
+        
+        <div className="weddetails">
+           <h3> Venue</h3>
+           <p> CORPORAT PARK, PUTRA NILAI 71800 Nilai, Negeri Sembilan, Malaysia</p>
+        </div>
+
+        <div className="daftar">
+            <button type="button" className='btn btn-secondary'>Pendaftaran </button>
+        </div>
+      </div>
+
       
+     
+     
+     
     </div>
   )
 }
