@@ -11,6 +11,10 @@ const Aboutme = () => {
     Aos.init({ duration: 2000});
 
   }, []);
+
+  const redirectGform = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSf1UNUwrftRNtjvkLFG-ChjNKrVn3YD4w7OkW7AMHQVAgBqiQ/viewform', '_blank'); 
+  }
   return (
     <div className=' aboutcontain p-5 ' data-aos = "fade-up" >
       <div className='walimat'>
@@ -55,7 +59,7 @@ const Aboutme = () => {
         </div>
 
         <div className="daftar">
-            <button type="button" className='btn btn-secondary'>Pendaftaran </button>
+            <button onClick={redirectGform} type="button" className='btn btn-secondary'>Pendaftaran </button>
         </div>
       </div>
 

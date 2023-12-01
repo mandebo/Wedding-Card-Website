@@ -15,8 +15,6 @@ function App() {
       
       <Header />
       <About />
-      <Services />
-      <Quotes />
       <Navbar/>
      
     </div>
