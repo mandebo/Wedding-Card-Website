@@ -8,6 +8,7 @@ import Services from "./components/Services";
 
 import { useCallback } from "react";
 import Quotes from "./components/Quotes";
+import { Quote } from "react-bootstrap-icons";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       
       <Header />
       <About />
+      <Quotes/>
       <Navbar/>
+    
      
     </div>
   );

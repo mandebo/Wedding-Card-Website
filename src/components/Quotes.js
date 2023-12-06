@@ -1,5 +1,7 @@
 import {React, useEffect, useState} from 'react'
 import axios from "axios";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 
 
@@ -8,33 +10,23 @@ const Quotes = () => {
 
     const[quotes, setQuotes] = useState([""]);
 
-    const getQuotes = () => {
-
-        fetch("https://type.fit/api/quotes").then((res) => res.json())
-        .then((data) => {
-            let randomNum = Math.floor(Math.random() * data.length);
-            setQuotes(data[randomNum]);
-    });
-    };
-
-    useEffect(() => {
-        getQuotes();
-    }, []);
+    const images = [
+        {"id":"102","author":"Ben Moore","width":4320,"height":3240,"url":"https://unsplash.com/photos/pJILiyPdrXI","download_url":"https://picsum.photos/id/102/4320/3240"},{"id":"103","author":"Ilham Rahmansyah","width":2592,"height":1936,"url":"https://unsplash.com/photos/DwTZwZYi9Ww","download_url":"https://picsum.photos/id/103/2592/1936"},
+        {"id":"106","author":"Arvee Marie","width":2592,"height":1728,"url":"https://unsplash.com/photos/YnfGtpt2gf4","download_url":"https://picsum.photos/id/106/2592/1728"},
+       {"id":"108","author":"Florian Klauer","width":2000,"height":1333,"url":"https://unsplash.com/photos/t1mqA3V3-7g","download_url":"https://picsum.photos/id/108/2000/1333"},
+        {"id":"109","author":"Zwaddi","width":4287,"height":2392,"url":"https://unsplash.com/photos/YvYBOSiBJE8","download_url":"https://picsum.photos/id/109/4287/2392"},
+    ]
 
   return (
     <div className='quotes-main'>
-        <div className='container p-5'>
-            <h2 className='quotes-cursive' onClick={getQuotes}>Quotes of the day! </h2>
-            {/* <button> Generate</button> */}
-            <div className='quotes-box container rounded'>
-                <div className='quotes-text'>{quotes.text}</div>
-                {quotes.author ?  <div className='quotes-text'>-{quotes.author}</div> :  <div className='quotes-text'>-Anonymous</div>}
+        <Carousel autoPlay infiniteLoop autoFocus stopOnHover showArrows="false">
+            {
+                images.map(image => <img src={image.download_url} alt={image.author}/>)
+            }
 
-                
-
-            </div>
-
-        </div>
+        </Carousel>
+        
+        
       
     </div>
   )
